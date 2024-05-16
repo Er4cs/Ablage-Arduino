@@ -1,0 +1,78 @@
+## Benutzerhandbuch für den Tresor mit Keypad und Servo-Motor
+
+Herzlich willkommen zum Benutzerhandbuch für den elektronischen Tresor mit Zahlencode und Servo-Motor. Dieses Handbuch soll Ihnen helfen, den Tresor sicher und effektiv zu nutzen, ohne dass Sie Programmierkenntnisse benötigen.
+
+### Inhalt
+1. Überblick über die Komponenten
+2. Bedienung des Tresors
+3. Fehlermeldungen und Hinweise
+
+### 1. Überblick über die Komponenten
+
+#### Hardware
+- **Keypad:** Ein Tastenfeld mit 16 Tasten zur Eingabe des Codes.
+- **Servo-Motor:** Ein Motor, der das Schloss des Tresors öffnet oder verriegelt.
+- **LEDs:** Zwei LEDs, eine gelbe und eine grüne, zur Anzeige des Tresorstatus.
+
+#### Software
+- **Aktuelles Passwort:** Das voreingestellte Passwort ist `4C4B`.
+- **Eingabecodes:** Die Tasten auf dem Keypad sind wie folgt angeordnet:
+  ```
+  D  #  0  *
+  C  9  8  7
+  B  6  5  4
+  A  3  2  1
+  ```
+
+### 2. Bedienung des Tresors
+
+#### Tresor öffnen
+1. **Eingabe des Codes:**
+   - Geben Sie nacheinander die vier Zeichen des Passworts ein.
+   - Die Reihenfolge muss genau beachtet werden. Das voreingestellte Passwort ist `4C4B`.
+   - Nach der Eingabe jeder Taste wird die Eingabe auf dem seriellen Monitor angezeigt.
+
+2. **Überprüfung:**
+   - Drücken Sie die `#`-Taste, um den eingegebenen Code zu überprüfen.
+   - Wenn der Code korrekt ist:
+     - Der Motor dreht sich und das Schloss öffnet (vertikale Position).
+     - Die gelbe LED geht aus, und die grüne LED leuchtet.
+
+3. **Falscher Code:**
+   - Wenn der Code falsch ist:
+     - Die gelbe LED leuchtet auf, die grüne LED bleibt aus.
+     - Eine entsprechende Fehlermeldung wird auf dem seriellen Monitor angezeigt.
+     - Sie können den Code erneut eingeben.
+
+#### Tresor verriegeln
+1. **Verriegeln:**
+   - Drücken Sie die `*`-Taste.
+   - Der Motor dreht sich, und das Schloss verriegelt (horizontale Position).
+   - Die gelbe LED leuchtet, die grüne LED erlischt.
+   - Eine Bestätigung wird auf dem seriellen Monitor angezeigt.
+
+#### Code zurücksetzen
+1. **Zurücksetzen:**
+   - Drücken Sie die `D`-Taste.
+   - Der Tresor wird zurückgesetzt, und Sie können den Code erneut eingeben.
+   - Die gelbe LED leuchtet, die grüne LED erlischt.
+   - Eine Bestätigung wird auf dem seriellen Monitor angezeigt.
+
+### 3. Fehlermeldungen und Hinweise
+
+- **"Code zurückgesetzt, bitte erneut eingeben":** Wenn die `D`-Taste gedrückt wird.
+- **"Tuer wurde verriegelt":** Wenn die `*`-Taste gedrückt wird.
+- **"Code korrekt, Schloss offen":** Wenn der richtige Code eingegeben wurde.
+- **"Code falsch, Schloss gesperrt":** Wenn ein falscher Code eingegeben wurde.
+- **Eingabebestätigung:** Nach jeder Tasteneingabe wird die gedrückte Taste auf dem seriellen Monitor angezeigt.
+
+### Hinweise
+- **LED-Anzeigen:**
+  - **Gelbe LED:** Zeigt an, dass der Tresor verriegelt ist oder ein Fehler aufgetreten ist.
+  - **Grüne LED:** Zeigt an, dass der Tresor erfolgreich geöffnet wurde.
+
+- **Eingabeprozess:**
+  - Stellen Sie sicher, dass jede Taste korrekt gedrückt wird und die Eingabe auf dem seriellen Monitor bestätigt wird.
+  - Bei Eingabefehlern können Sie den Prozess durch Drücken der `D`-Taste zurücksetzen.
+
+Viel Erfolg beim Benutzen Ihres elektronischen Tresors! Bei weiteren Fragen oder Problemen wenden Sie sich bitte an den Hersteller.
