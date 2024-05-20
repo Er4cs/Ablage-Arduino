@@ -128,4 +128,7 @@ if (Taste) //Wenn eine Taste gedrückt wurde...
   }
  }
 }
+
+// Funktion der Roten LED, NFC und der Buzzer habe kalte Lötstellen oder einen Wackelkontakt der das nutzen der Module nicht möglich macht.
+//Diese Kalten Lötstellen sind im Schaltplan nicht extra hervor gehoben.
 //17.05.2024 Bruno Pfleger, Eric Nieder 
